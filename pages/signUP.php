@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,22 +8,25 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
-    <link href="assets/css/vendor.min.css" rel="stylesheet" />
-    <link href="assets/css/app.min.css" rel="stylesheet" />
-  	<link href="assets/css/style.css" rel="stylesheet" />
+    <link href="../assets/css/vendor.min.css" rel="stylesheet" />
+    <link href="../assets/css/app.min.css" rel="stylesheet" />
+  	<link href="../assets/css/style.css" rel="stylesheet" />
 </head>
 <body class="d-flex justify-content-center align-items-center" style=" background-color: #101622;">
      <div style="box-shadow: -7px 7px 20px black;  border-radius: 1rem!important;" class="d-flex " >
-        <img class="" style=" width: 400px;  height:480px; border-top-left-radius: 1rem!important; border-bottom-left-radius: 1rem!important; " src="assets/img/bg.jpg" alt="bg">
-        <section style="width: 400px;  height:480px; background-color: #50545F ; border-top-right-radius: 1rem!important; border-bottom-right-radius: 1rem!important;" class=" "> 
-             <h6 class=" d-flex justify-content-end m-3 fw-light">Don’t have an account ?<span><a href="pages/signUp.php">Sign up</a></span></h6>
-             <h1 style="font-size: 3rem;" class="text-white mx-5 my-4 fw-light">LOG IN</h1>            
-            <form id="LogIn" action="../config/script.php" class="">
+        <img class="" style=" width: 400px;  height:480px; border-top-left-radius: 1rem!important; border-bottom-left-radius: 1rem!important; " src="../assets/img/bg.jpg" alt="bg">
+        <section style="width: 400px;  height:480px; background-color: #50545F ; border-top-right-radius: 1rem!important; border-bottom-right-radius: 1rem!important;" class="py-5 "> 
+             <h1 style="font-size: 3rem;" class="text-white m-5  fw-light">SIGN UP</h1>            
+            <form id="LogIn" action="" class="">
                 <div class="mx-5">
 					<label for="USER NAME" class="col-form-label text-white fw-light">USER NAME</label>
 				    <input style="background-color: #50545F;" class="form-control border border-white border-1 rounded " type="text" name="userName"  class="form-control" id="userNAme" required>
 		        </div>  
-                <div class="m-5">
+                <div class="mx-5 my-3">
+					<label for="EMAIL" class="col-form-label text-white fw-light">EMAIL</label>
+				    <input style="background-color: #50545F;" class="form-control border border-white border-1 rounded " type="email" name="email"  class="form-control" id="email" required>
+		        </div>  
+                <div class=" mx-5 my-3">
 					<label for="PASSWORD" class="col-form-label text-white fw-light">PASSWORD</label>
 				    <input style="background-color: #50545F;" class="form-control border border-white border-1 rounded " type="password" name="password"  class="form-control" id="password" required>
 		        </div>  

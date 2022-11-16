@@ -1,0 +1,32 @@
+
+*{
+    font-family: 'Hind Guntur', sans-serif;
+}
+
+body{
+    background-image: url("../assets/bg1.jpg");
+    background-blend-mode: color rgba(0, 0, 0, 0.534);
+}
+h1{
+    font-family: 'Jockey One', sans-serif;
+    font-size: 70px !important;
+    display: inline;
+}
+img{
+    width: 100px;
+    height:50px;
+}
+h6{
+    color: #CAC0C0;
+
+}
+a{
+    margin-left: 0.5rem;
+    text-decoration: none;
+    color: white;
+}
+button{
+    font-family: 'Jockey One', sans-serif;
+    background-color: #211522 !important;
+}
+
