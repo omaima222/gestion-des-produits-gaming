@@ -1,0 +1,14 @@
+
+body{
+    background-image: url("assets/bg1.jpg");
+    background-blend-mode: color rgba(0, 0, 0, 0.534);
+}
+h1{
+    font-family: 'Jockey One', sans-serif;
+    font-size: 70px !important;
+    display: inline;
+}
+img{
+    width: 100px;
+    height:50px;
+}
