@@ -6,7 +6,7 @@ $username = "root";
 $password = "";
 $database = "gestion_gaming_products"; 
 
-$conn = mysqli_connect($servername, $username, $password, $database);
+$conn = mysqli_connect($servername,$username,$password,$database);
 
 
 if (!$conn) {

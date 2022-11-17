@@ -4,8 +4,8 @@
 }
 
 body{
-    background-image: url("../assets/bg1.jpg");
-    background-blend-mode: color rgba(0, 0, 0, 0.534);
+    background-image: url("../img/bg1.jpg") ;
+    background-blend-mode: color rgba(0, 0, 0, 0.589) !important;
 }
 h1{
     font-family: 'Jockey One', sans-serif;
@@ -30,3 +30,6 @@ button{
     background-color: #211522 !important;
 }
 
+.Btable{
+    background-color: rgba(0, 0, 0, 0.74);
+}
