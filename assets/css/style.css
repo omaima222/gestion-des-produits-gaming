@@ -1,11 +1,20 @@
 
 *{
     font-family: 'Hind Guntur', sans-serif;
+    font-weight: lighter ;
 }
 
-body{
+.dashboard_product{
     background-image: url("../img/bg1.jpg") ;
-    background-blend-mode: color rgba(0, 0, 0, 0.589) !important;
+    background-color: rgba(0, 0, 0, 0.336) !important;
+    background-blend-mode: color;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+body{
+    background-color: #101622!important;
 }
 h1{
     font-family: 'Jockey One', sans-serif;
@@ -31,5 +40,29 @@ button{
 }
 
 .Btable{
-    background-color: rgba(0, 0, 0, 0.74);
+    background-color: rgba(0, 0, 0, 0.61);
+}
+
+.product{
+    width: 10rem;
+    height: 100rem;
+    background-color: rgba(0, 0, 0, 0.842);
+    border-radius: 1rem!important;
+}
+
+
+.productForm input{
+    border-radius: 0.6rem;
+    background: transparent;
+    width: 20rem;
+}
+
+
+
+.productForm  label{
+    font-size: 1rem;
+} 
+
+#case:hover{
+    background-color: rgba(0, 0, 0, 0.575)!important;
 }
