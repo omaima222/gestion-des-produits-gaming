@@ -21,7 +21,7 @@
     </header>
     <section style=" block-size: fit-content; width:fit-content; background-color: rgba(0, 0, 0, 0.842); border-radius: 1rem;" class=" product border border-white border-2 mx-5 ">
     <div class="d-flex justify-content-between mx-5 my-3">
-     <h1 style="font-weight:lighter;" class="text-white">PRODUCT</h1>
+     <h1 style="font-weight:lighter;" class="text-white mx-3">PRODUCT</h1>
      <a href="dashboard.php"><h2 class="my-4">X</h2></a>
     </div>
     <?php

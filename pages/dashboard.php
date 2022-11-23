@@ -1,7 +1,11 @@
 
-<?php
+  <?php
     include('../config/script.php');
-?>
+    include('../config/db_conn.php');
+    if(!isset($_SESSION['userid'])){
+      header('location:../index.php');
+    }
+  ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,16 +23,25 @@
     <link href="../assets/css/vendor.min.css" rel="stylesheet" />
    	<link href="../assets/css/app.min.css" rel="stylesheet" />
   	<link href="../assets/css/style.css" rel="stylesheet" />
-    
+
 </head>
 <body class="dashboard_product p-3">
   <header class="d-flex justify-content-between mx-3" >
     <a href="dashboard.php"><img class="m-4" src="../assets/img/logo.png" alt="logo"></a>
     <h1 class=" text-white fw-light ">ADMIN DASHBOARD</h1>
-    <section class=" text-center m-4 mx-5">
-       <a class="" href="../index.php"><img style="width:4rem; height:4rem;" src="../assets/img/user.png" alt=""></a>    
-       <h5 class="text-white fw-light my-1"></h5>
-       <h6 class="text-white fw-light"></h6>
+    <?php 
+            global $conn;
+            $uid=$_SESSION['userid'];
+            $sql="SELECT * FROM user 
+                  WHERE id='$uid'";
+            $result=mysqli_query($conn,$sql);
+            $user=mysqli_fetch_assoc($result);
+
+    ?>
+    <section class="text-center mx-5">
+       <a  class="" href="logout.php"><img style="width:4rem; height:4rem;" src="../assets/img/user.png" alt=""></a>    
+       <h5 class="text-white fw-light my-1"><?= $user['name']; ?></h5>
+       <h6 class="text-white fw-light"><?= $user['email']; ?></h6>
     </section>
   </header>
   <div class="Btable d-flex justify-content-center rounded-3  mx-4 p-2">
@@ -61,7 +74,7 @@
               ?>            
              <tr id="case" scope="row" style="font-size: 0.9rem;" class="clickable" onclick="window.location='Edit_delete.php?id=<?= $product['id']; ?>'">
               <td><?= $product['id']; ?></td>
-              <td><img style ="width:7rem;" src="../assets/img/<?= $product['photo']; ?>" alt=""></td>
+              <td><img style ="width:5rem;" src="../assets/img/<?= $product['photo']; ?>" alt=""></td>
               <td><?= $product['name']; ?></td>
               <td><?= $product['category_name']; ?></td>
               <td title="<?= $product['description']; ?>"><?= $desc; ?></td>

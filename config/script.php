@@ -8,6 +8,7 @@
    if(isset($_POST['update'])) updateProduct();
    if(isset($_POST['delete'])) deleteProduct();
 
+
   
 
 //__________________________________L O G I N__________________________________//
@@ -18,8 +19,10 @@ function logIn(){
     $userName = $_POST['userName'];
     $password = $_POST['password'];
     $sql="SELECT * FROM user WHERE name='$userName' && password='$password'";
-
-    if(mysqli_num_rows(mysqli_query($conn,$sql))){
+    $result=mysqli_query($conn,$sql);
+    $user=mysqli_fetch_assoc($result);
+    if(mysqli_num_rows($result)){
+        $_SESSION['userid']=$user['id'];
         header("Location:../pages/dashboard.php?");
     }
     else
@@ -45,6 +48,7 @@ function signUp(){
     }
   
 }
+
 
 //__________________________________A D D__________________________________//
 
