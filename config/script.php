@@ -27,7 +27,9 @@ function logIn(){
     }
     else
     {
-    echo "incorrect inputs";
+     $_SESSION['error']="incorrect inputs";
+     header("Location:../index.php?");
+
     }
 }
 

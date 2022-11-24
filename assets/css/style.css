@@ -12,9 +12,11 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    margin-bottom: 1rem;
 }
 body{
     background-color: #101622!important;
+    margin-bottom: 1rem;
 }
 h1{
     font-family: 'Jockey One', sans-serif;
@@ -27,7 +29,6 @@ img{
 }
 h6{
     color: #CAC0C0;
-
 }
 a{
     margin-left: 0.5rem;
@@ -41,20 +42,28 @@ button{
 
 .Btable{
     background-color: rgba(0, 0, 0, 0.61);
+    width: fit-content;
+    margin-bottom: 1rem;
+    width: 100%;
+
+}
+.Btable table{
+    width: fit-content;
+    width: 100%;
 }
 
 .product{
-    width: 10rem;
-    height: 100rem;
     background-color: rgba(0, 0, 0, 0.842);
     border-radius: 1rem!important;
+    width: fit-content;
+    width: 100%;
 }
 
 
 .productForm input{
     border-radius: 0.6rem;
     background: transparent;
-    width: 20rem;
+    width: 100%;
 }
 
 
@@ -65,4 +74,46 @@ button{
 
 #case:hover{
     background-color: rgba(0, 0, 0, 0.575)!important;
+}
+
+
+@media only screen and (max-width: 768px){
+
+.half{
+   display: none;
+}
+.otherhalf{
+   border-radius: 1rem;
+   width: fit-content;
+}
+
+.dashboard_product .Btable{  
+   display: block;
+   flex-direction: column;
+}
+
+.dashboard_product .Btable table{  
+    width: fit-content;
+}
+
+.productForm .all{
+    display: block;
+    flex-direction: column;
+}
+
+.statics{
+    display: flex;
+    align-items: baseline;
+}
+
+.statics table{
+    margin-right: 1rem;
+}
+
+.dashboard_product .bar{
+    display: block;
+    flex-direction: column;
+}
+
+
 }
