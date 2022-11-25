@@ -13,8 +13,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add a product</title>
-    
-    
+   
+    <link rel="stylesheet" href="https://parsleyjs.org/src/parsley.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script defer src="https://parsleyjs.org/dist/parsley.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300&display=swap" rel="stylesheet">
@@ -32,7 +34,6 @@
                     WHERE id='$uid'";
                 $result=mysqli_query($conn,$sql);
                 $user=mysqli_fetch_assoc($result);
-
         ?>
         <section class="text-center">
            <h4 class="text-white fw-light m-4"><?= $user['name']; ?><span> <a  class="m-1" href="../config/logout.php"><img style="width:2rem; height:2rem;" src="../assets/img/user.png" alt=""></a>    </span></h4>
@@ -44,12 +45,12 @@
                     <h1 style="font-weight:lighter;" class="text-white mx-3">PRODUCT</h1>
                     <a href="dashboard.php"><h2 class="my-4">X</h2></a>
                 </div>
-                <form class="productForm" id="addForm" action="../config/script.php"  method="POST" enctype="multipart/form-data">
+                <form class="productForm" id="addForm" action="../config/script.php"  method="POST" enctype="multipart/form-data" data-parsley-validate>
                     <div class="all d-flex justify-content-center py-2 px-5">
                         <section class="mx-3">
                                     <div class="my-2">
                                                     <label for="name" class="col-form-label text-white fw-light">Name</label>
-                                                    <input  class="form-control border border-white border-2 text-white fw-light " type="text" name="name"  class="form-control" id="name" required>
+                                                    <input class="form-control border border-white border-2 text-white fw-light " type="text" name="name"  class="form-control" id="name" data-parsley-trigger="keyup"  data-parsley-minlength="5" required>
                                     </div>  
                                     <div class="my-2">
                                                     <label for="category" class="col-form-label text-white fw-light">Category</label>
@@ -64,11 +65,11 @@
                                     </div>  
                                     <div class="my-2">
                                                     <label for="quantity" class="col-form-label text-white fw-light">Quantity</label>
-                                                    <input  class="form-control border border-white border-2 text-white fw-light " type="text" name="quantity"  class="form-control" id="quantity" required>
+                                                    <input  class="form-control border border-white border-2 text-white fw-light " type="text" name="quantity"  class="form-control" id="quantity" data-parsley-trigger="keyup"  data-parsley-type="integer" required>
                                     </div>  
                                     <div class="my-2">
                                                     <label for="price" class="col-form-label text-white fw-light">Price</label>
-                                                    <input  class="form-control border border-white border-2 text-white fw-light  " type="text" name="price"  class="form-control" id="price" required>
+                                                    <input  class="form-control border border-white border-2 text-white fw-light  " type="text" name="price"  class="form-control" id="price" data-parsley-trigger="keyup"  data-parsley-type="integer" required>
                                     </div>  
                         </section>
                         <section class="mx-3" >
@@ -78,7 +79,7 @@
                                     </div>  
                                     <div class="my-2">
                                                     <label for="description" class="col-form-label text-white fw-light">Description</label>
-                                                    <textarea style="background:none;  border-radius: 0.6rem; height:12.5rem; " class="form-control text-white fw-light  border border-white border-2 text-white fw-light" name="description" id="description" required></textarea>
+                                                    <textarea style="background:none;  border-radius: 0.6rem; height:12.5rem; " class="form-control text-white fw-light  border border-white border-2 text-white fw-light" name="description" id="description" data-parsley-trigger="keyup"  data-parsley-minlength="5" required></textarea>
                                     </div>
                         </section>
                     </div>
@@ -90,6 +91,5 @@
     </div>
 
 </body>
-
-
+<script src="../main.js"></script>
 </html>
