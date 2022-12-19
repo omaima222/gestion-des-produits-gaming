@@ -104,13 +104,13 @@ function   updateProduct(){
         $sql="UPDATE products SET name='$name' , category_id='$category' , quantity='$quantity' ,
           price='$price' , description='$description' , photo='$pic' WHERE id='$id'";
         move_uploaded_file($image, '../assets/img/'.$pic);
-
     }
     
     $result=mysqli_query($conn,$sql);    
     if($result){
         header('location:../pages/dashboard.php');
     }
+
 }
 
 

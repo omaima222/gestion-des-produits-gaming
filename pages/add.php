@@ -25,7 +25,7 @@
   	<link href="../assets/css/style.css" rel="stylesheet" />
 </head>
 <body class="dashboard_product ">
-   <header style="" class="d-flex justify-content-between" >
+   <header  class="d-flex justify-content-between" >
         <a href="dashboard.php"><img class="m-4" src="../assets/img/logo.png" alt="logo"></a>
         <?php 
                 global $conn;
@@ -93,3 +93,4 @@
 </body>
 <script src="../main.js"></script>
 </html>
+

@@ -23,7 +23,7 @@
   	<link href="../assets/css/style.css" rel="stylesheet" />
 </head>
 <body class="dashboard_product ">
-   <header style="" class="d-flex justify-content-between" >
+   <header  class="d-flex justify-content-between" >
         <a href="dashboard.php"><img class="m-4" src="../assets/img/logo.png" alt="logo"></a>
         <?php 
                 global $conn;
@@ -32,7 +32,6 @@
                     WHERE id='$uid'";
                 $result=mysqli_query($conn,$sql);
                 $user=mysqli_fetch_assoc($result);
-
         ?>
         <section class="text-center">
            <h4 class="text-white fw-light m-4"><?= $user['name']; ?><span> <a  class="m-1" href="../config/logout.php"><img style="width:2rem; height:2rem;" src="../assets/img/user.png" alt=""></a>    </span></h4>
